@@ -4,6 +4,7 @@
 #include <unistd.h>
 
 char global_string[] = "I am veera";
+const int number = 200;
 
 int main(void) {
   int pid = getpid();
@@ -12,6 +13,7 @@ int main(void) {
     printf("Global string address %p\n", &global_string);
     printf("the global string is %s\n",global_string );
     printf("The code block address %p\n",&&code_block);
+    printf("the constant number address is %p\n",&number );
 
     printf("\n /proc/%d/maps \n",pid );
     char command[50];
